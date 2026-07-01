@@ -297,6 +297,21 @@ function Results() {
 }
 
 function VideoShowcase() {
+  const [active, setActive] = useState(0)
+
+  const videos = [
+    {
+      src: '/videos/highlight.mov',
+      poster: '/photos/poster-video.jpg',
+      label: 'New Englands 2026',
+    },
+    {
+      src: '/videos/hero.mov',
+      poster: '/photos/photo1.jpg',
+      label: 'Racing Action',
+    },
+  ]
+
   return (
     <section className="video-showcase">
       <div className="video-showcase__inner">
@@ -307,17 +322,44 @@ function VideoShowcase() {
             Racing at the highest junior level demands boat speed, tactical awareness,
             and composure under pressure. Watch Ozzie compete.
           </p>
+          <div className="video-tabs">
+            {videos.map((v, i) => (
+              <button
+                key={i}
+                className={`video-tab ${active === i ? 'video-tab--active' : ''}`}
+                onClick={() => setActive(i)}
+              >
+                {v.label}
+              </button>
+            ))}
+          </div>
         </div>
         <div className="video-showcase__video reveal">
-          <video
-            controls
-            playsInline
-            poster="/photos/poster-video.jpg"
-            className="video-showcase__player"
-          >
-            <source src="/videos/highlight.mov" type="video/mp4" />
-            <source src="/videos/highlight.mov" type="video/quicktime" />
-          </video>
+          <div className="video-slider">
+            {videos.map((v, i) => (
+              <video
+                key={i}
+                controls
+                playsInline
+                poster={v.poster}
+                className="video-showcase__player"
+                style={{ display: active === i ? 'block' : 'none' }}
+              >
+                <source src={v.src} type="video/mp4" />
+                <source src={v.src} type="video/quicktime" />
+              </video>
+            ))}
+          </div>
+          <div className="video-dots">
+            {videos.map((_, i) => (
+              <button
+                key={i}
+                className={`video-dot ${active === i ? 'video-dot--active' : ''}`}
+                onClick={() => setActive(i)}
+                aria-label={`Video ${i + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

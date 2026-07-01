@@ -385,12 +385,64 @@
   font-size: 1rem;
   line-height: 1.75;
   margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+.video-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.video-tab {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.5);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.5rem 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.video-tab:hover {
+  border-color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.8);
+}
+.video-tab--active {
+  background: var(--red);
+  border-color: var(--red);
+  color: var(--white);
+}
+.video-slider {
+  width: 100%;
 }
 .video-showcase__player {
   width: 100%;
   aspect-ratio: 16/9;
   object-fit: cover;
   background: #000;
+  display: block;
+}
+.video-dots {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.video-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.25);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  padding: 0;
+}
+.video-dot--active {
+  background: var(--red);
+  transform: scale(1.3);
 }
 
 /* CONTACT */
