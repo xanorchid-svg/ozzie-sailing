@@ -303,12 +303,12 @@ function VideoShowcase() {
     {
       src: '/videos/highlight.mov',
       poster: '/photos/poster-video.jpg',
-      label: 'New Englands 2026',
+      label: 'Downwind',
     },
     {
       src: '/videos/hero.mov',
       poster: '/photos/photo1.jpg',
-      label: 'Racing Action',
+      label: 'Upwind',
     },
   ]
 
