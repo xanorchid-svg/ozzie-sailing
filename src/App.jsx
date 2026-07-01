@@ -3,7 +3,7 @@ import './App.css'
 
 const RESULTS = {
   2026: [
-    { place: '2nd', placeClass: 'silver', name: 'Flying Scot Junior North American Championship', cls: 'Flying Scot · RCYC', url: 'https://rcyc.org/regatta/pNRs608CbH/results' },
+    { place: '2nd', placeClass: 'silver', name: 'Flying Scot Junior North American Championship', cls: 'Flying Scot · RCYC', url: 'https://rcyc.org/regatta/lT5wF3tGQz/results?class_id=7nkVKf8LtJ' },
     { place: '4th', placeClass: 'bronze', name: 'Sears Cup Area F Qualifier', cls: 'C420 · Chubb US Youth Triplehanded', url: 'https://theclubspot.com/regatta/QwVHpXxuRC/results' },
     { place: '6th', placeClass: 'other', name: 'C420 New England Championship', cls: 'C420 · Erik C. Menyhart Trophy', url: 'https://theclubspot.com/regatta/WnZvcOGgpY/results' },
     { place: '★', placeClass: 'star', name: 'i420 World Championship — Qualified', cls: 'i420 · International · 2026', url: null },
@@ -21,6 +21,7 @@ const RESULTS = {
     { place: '33rd', placeClass: 'other', name: 'C420 New England Championship', cls: 'C420', url: 'https://theclubspot.com/regatta/znzc9G0rxs/results' },
   ],
   2024: [
+    { place: '44th', placeClass: 'other', name: 'Sunfish World Championship', cls: 'Sunfish · 53rd Worlds', url: null },
     { place: '10th', placeClass: 'other', name: 'CORK Regatta', cls: 'Optimist · Kingston, Ontario', url: null },
     { place: '28th', placeClass: 'other', name: 'Orange Bowl International Regatta', cls: 'Optimist · Coconut Grove', url: null },
     { place: '★', placeClass: 'star', name: 'International Racing — Palamos & Belgium', cls: 'Optimist · Gold Fleet both events', url: null },
@@ -167,8 +168,9 @@ function About() {
           <p className="reveal">
             Outside of sailing Ozzie enjoys skiing, fishing, and spending time with family and
             friends. He also enjoys giving back to his community — this year{' '}
-            <strong>creating a Meals on Wheels Chapter</strong>, doing service weekly, and being
-            elected to <strong>The Executive Teen Board of Meals on Wheels</strong> and an Outreach.
+            <strong>creating a Meals on Wheels Chapter at his school</strong>, doing weekly service,
+            and being elected to be on the{' '}
+            <strong>Dallas Meals on Wheels city-wide Executive Teen Board</strong>.
           </p>
           <p className="reveal">
             Based between <strong>Texas and the East Coast sailing circuit</strong>, Ozzie trains
