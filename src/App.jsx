@@ -156,19 +156,19 @@ function About() {
           <p className="reveal">
             Ozzie Young is a <strong>high-performance junior sailor</strong> competing at the
             national and international level. Starting in <strong>Optimist dinghies</strong> and
-            racing internationally in <strong>Palamos and Belgium</strong>, then competing in{' '}
+            racing internationally, then competing in{' '}
             <strong>C420s, i420s, Sonars, Bluenoses, Sunfishes, and Flying Scots</strong>.
           </p>
           <p className="reveal">
-            So far in 2026, Ozzie earned a <strong>2nd place at the Flying Scot Junior North
-            Americans</strong>, placed <strong>4th at the Sears Cup Area F Qualifier</strong>, and
-            most recently placed <strong>6th at The New England Championship</strong>.
+            So far in 2026, Ozzie most recently placed <strong>6th at The New England
+            Championship</strong>, earned a <strong>2nd place at the Flying Scot Junior North
+            Americans</strong>, and placed <strong>4th at the Sears Cup Area F Qualifier</strong>.
           </p>
           <p className="reveal">
             Outside of sailing Ozzie enjoys skiing, fishing, and spending time with family and
             friends. He also enjoys giving back to his community — this year{' '}
             <strong>creating a Meals on Wheels Chapter</strong>, doing service weekly, and being
-            elected to the <strong>executive Teen Board of Meals on Wheels</strong> and an Outreach.
+            elected to <strong>The Executive Teen Board of Meals on Wheels</strong> and an Outreach.
           </p>
           <p className="reveal">
             Based between <strong>Texas and the East Coast sailing circuit</strong>, Ozzie trains
