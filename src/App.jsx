@@ -104,7 +104,7 @@ function Hero() {
       </div>
       <div className="hero__overlay" />
       <div className="hero__content">
-        <div className="hero__eyebrow">Competitive Sailor · Class of 2028</div>
+        <div className="hero__eyebrow">i420 Worlds Qualifier · Junior Sailor · Class of 2028</div>
         <h1 className="hero__name">
           Osborn<br />
           <span className="hero__name--accent">"Ozzie"</span><br />
@@ -126,8 +126,8 @@ function StatsBar() {
   const stats = [
     { number: '3+', label: 'Years Racing' },
     { number: '20+', label: 'Regattas' },
-    { number: 'i420', label: 'Worlds Qualified' },
-    { number: '4', label: 'Boat Classes' },
+    { number: 'i420', label: 'Worlds Qualifier' },
+    { number: '6', label: 'Boat Classes' },
     { number: "'28", label: 'Grad Year' },
   ]
   return (
