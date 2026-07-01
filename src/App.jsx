@@ -181,15 +181,61 @@ function About() {
   )
 }
 
-function GalleryGrid({ photos, className = '' }) {
+function Lightbox({ photos, startIndex, onClose }) {
+  const [index, setIndex] = useState(startIndex)
+
+  useEffect(() => {
+    const fn = (e) => {
+      if (e.key === 'Escape') onClose()
+      if (e.key === 'ArrowRight') setIndex(i => (i + 1) % photos.length)
+      if (e.key === 'ArrowLeft') setIndex(i => (i - 1 + photos.length) % photos.length)
+    }
+    window.addEventListener('keydown', fn)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      window.removeEventListener('keydown', fn)
+      document.body.style.overflow = ''
+    }
+  }, [photos.length, onClose])
+
   return (
-    <div className={`gallery-grid ${className}`}>
-      {photos.map((p, i) => (
-        <div key={i} className={`gallery-item gallery-item--${i + 1} reveal`} style={{ transitionDelay: `${(i % 3) * 0.1}s` }}>
-          <img src={p.src} alt={p.alt} loading="lazy" />
-        </div>
-      ))}
+    <div className="lightbox" onClick={onClose}>
+      <button className="lightbox__close" onClick={onClose}>✕</button>
+      <button className="lightbox__prev" onClick={e => { e.stopPropagation(); setIndex(i => (i - 1 + photos.length) % photos.length) }}>‹</button>
+      <div className="lightbox__img-wrap" onClick={e => e.stopPropagation()}>
+        <img src={photos[index].src} alt={photos[index].alt} className="lightbox__img" />
+        <div className="lightbox__counter">{index + 1} / {photos.length}</div>
+      </div>
+      <button className="lightbox__next" onClick={e => { e.stopPropagation(); setIndex(i => (i + 1) % photos.length) }}>›</button>
     </div>
+  )
+}
+
+function GalleryGrid({ photos, allPhotos, className = '' }) {
+  const [lightboxIndex, setLightboxIndex] = useState(null)
+  const pool = allPhotos || photos
+
+  return (
+    <>
+      <div className={`gallery-grid ${className}`}>
+        {photos.map((p, i) => (
+          <div
+            key={i}
+            className={`gallery-item gallery-item--${i + 1} reveal`}
+            style={{ transitionDelay: `${(i % 3) * 0.1}s`, cursor: 'pointer' }}
+            onClick={() => setLightboxIndex(pool.indexOf(p))}
+          >
+            <img src={p.src} alt={p.alt} loading="lazy" />
+            <div className="gallery-item__overlay">
+              <span className="gallery-item__zoom">⤢</span>
+            </div>
+          </div>
+        ))}
+      </div>
+      {lightboxIndex !== null && (
+        <Lightbox photos={pool} startIndex={lightboxIndex} onClose={() => setLightboxIndex(null)} />
+      )}
+    </>
   )
 }
 
@@ -198,7 +244,7 @@ function Gallery() {
     <section className="gallery-section" id="gallery">
       <div className="section-label reveal" style={{ color: 'rgba(255,255,255,0.5)' }}>Gallery</div>
       <h2 className="section-title reveal" style={{ color: '#fff' }}>On the Water</h2>
-      <GalleryGrid photos={PHOTOS.slice(0, 9)} />
+      <GalleryGrid photos={PHOTOS.slice(0, 9)} allPhotos={PHOTOS} />
     </section>
   )
 }
@@ -259,7 +305,7 @@ function VideoShowcase() {
           <video
             controls
             playsInline
-            poster="/photos/photo8.jpg"
+            poster="/photos/poster-video.jpg"
             className="video-showcase__player"
           >
             <source src="/videos/highlight.mov" type="video/mp4" />
@@ -318,7 +364,7 @@ export default function App() {
       <Results />
       <VideoShowcase />
       <section className="gallery-section" style={{ paddingTop: 0 }}>
-        <GalleryGrid photos={PHOTOS.slice(9, 12)} />
+        <GalleryGrid photos={PHOTOS.slice(9, 12)} allPhotos={PHOTOS} />
       </section>
       <Contact />
       <Footer />
