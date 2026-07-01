@@ -29,18 +29,18 @@ const RESULTS = {
 }
 
 const PHOTOS = [
-  { src: '/photos/photo1.jpg', alt: 'Club 420 New Englands racing' },
-  { src: '/photos/photo2.jpg', alt: 'Club 420 New Englands fleet' },
-  { src: '/photos/photo3.jpg', alt: 'Ozzie racing action' },
-  { src: '/photos/photo4.jpg', alt: 'C420 close racing' },
-  { src: '/photos/photo5.jpg', alt: 'Racing upwind' },
-  { src: '/photos/photo6.jpg', alt: 'Bluenose classic' },
-  { src: '/photos/photo7.jpg', alt: 'Sailing portrait' },
-  { src: '/photos/photo8.jpg', alt: 'Spinnaker run in Miami' },
-  { src: '/photos/photo9.jpg', alt: 'Regatta fleet' },
-  { src: '/photos/photo10.jpg', alt: 'Bluenose fleet racing' },
-  { src: '/photos/photo11.jpg', alt: 'Racing action' },
-  { src: '/photos/photo12.jpg', alt: 'On the water' },
+  { src: '/photos/photo1.jpg', alt: 'Club 420 New Englands — Ozzie and crew' },
+  { src: '/photos/photo2.jpg', alt: 'Club 420 New Englands — Ozzie hiking hard' },
+  { src: '/photos/photo3.jpg', alt: 'Spinnaker run — blue and yellow' },
+  { src: '/photos/photo4.jpg', alt: 'Stormy C420 racing' },
+  { src: '/photos/photo5.jpg', alt: 'Miami Sail Week — pink spinnaker' },
+  { src: '/photos/photo6.jpg', alt: 'Bluenose Classic — boat 46' },
+  { src: '/photos/photo7.jpg', alt: 'Regatta awards' },
+  { src: '/photos/photo8.jpg', alt: 'Bluenose fleet — wide shot' },
+  { src: '/photos/photo9.jpg', alt: 'Downwind spinnaker run' },
+  { src: '/photos/photo10.jpg', alt: 'Big fleet panorama' },
+  { src: '/photos/photo11.jpg', alt: 'Colorful spinnaker fleet' },
+  { src: '/photos/photo12.jpg', alt: 'Sunfish racing — Ozzie driving' },
 ]
 
 function useScrollReveal() {
