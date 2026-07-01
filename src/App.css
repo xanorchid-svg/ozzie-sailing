@@ -571,6 +571,10 @@
 
   .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
 
+  /* On mobile: show 10 photos in first grid, only 2 in second */
+  .gallery-grid--primary { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid--secondary .gallery-item:last-child { display: none; }
+
   .stats-bar { flex-wrap: wrap; }
   .stats-bar__item {
     flex: 1 0 calc(33% - 1rem);

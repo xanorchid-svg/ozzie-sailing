@@ -154,24 +154,29 @@ function About() {
           <div className="section-label reveal">About</div>
           <h2 className="section-title reveal">Built on<br />Water</h2>
           <p className="reveal">
-            Ozzie Young is a <strong>high-performance junior sailor</strong> competing at the national
-            and international level. Starting in Optimist dinghies and racing internationally in
-            Palamos and Belgium, he has steadily built one of the most diverse competitive records
-            in his class.
+            Ozzie Young is a <strong>high-performance junior sailor</strong> competing at the
+            national and international level. Starting in <strong>Optimist dinghies</strong> and
+            racing internationally in <strong>Palamos and Belgium</strong>, then competing in{' '}
+            <strong>C420s, i420s, Sonars, Bluenoses, Sunfishes, and Flying Scots</strong>.
           </p>
           <p className="reveal">
-            In 2026, Ozzie earned a <strong>2nd place at the Flying Scot Junior North Americans</strong>,
-            placed <strong>4th at the Sears Cup Area F Qualifier</strong>, and most recently{' '}
-            <strong>qualified for the i420 World Championship</strong> — a milestone that reflects
-            years of disciplined training and consistent performance under pressure.
+            So far in 2026, Ozzie earned a <strong>2nd place at the Flying Scot Junior North
+            Americans</strong>, placed <strong>4th at the Sears Cup Area F Qualifier</strong>, and
+            most recently placed <strong>6th at The New England Championship</strong>.
           </p>
           <p className="reveal">
-            Based between Texas and the East Coast sailing circuit, Ozzie trains year-round and
-            competes from Miami to Nova Scotia. He is actively seeking collegiate sailing
-            opportunities for the class of 2028.
+            Outside of sailing Ozzie enjoys skiing, fishing, and spending time with family and
+            friends. He also enjoys giving back to his community — this year{' '}
+            <strong>creating a Meals on Wheels Chapter</strong>, doing service weekly, and being
+            elected to the <strong>executive Teen Board of Meals on Wheels</strong> and an Outreach.
+          </p>
+          <p className="reveal">
+            Based between <strong>Texas and the East Coast sailing circuit</strong>, Ozzie trains
+            year-round and competes from Miami to Nova Scotia. He is actively seeking{' '}
+            <strong>collegiate sailing opportunities</strong> for the class of 2028.
           </p>
           <div className="boats reveal">
-            {['C420', 'i420', 'Flying Scot', 'Sunfish', 'Optimist'].map(b => (
+            {['C420', 'i420', 'Flying Scot', 'Sunfish', 'Bluenose', 'Sonar', 'Optimist'].map(b => (
               <span key={b} className="boat-chip">{b}</span>
             ))}
           </div>
@@ -244,7 +249,7 @@ function Gallery() {
     <section className="gallery-section" id="gallery">
       <div className="section-label reveal" style={{ color: 'rgba(255,255,255,0.5)' }}>Gallery</div>
       <h2 className="section-title reveal" style={{ color: '#fff' }}>On the Water</h2>
-      <GalleryGrid photos={PHOTOS.slice(0, 9)} allPhotos={PHOTOS} />
+      <GalleryGrid photos={PHOTOS.slice(0, 9)} allPhotos={PHOTOS} className="gallery-grid--primary" />
     </section>
   )
 }
@@ -364,7 +369,7 @@ export default function App() {
       <Results />
       <VideoShowcase />
       <section className="gallery-section" style={{ paddingTop: 0 }}>
-        <GalleryGrid photos={PHOTOS.slice(9, 12)} allPhotos={PHOTOS} />
+        <GalleryGrid photos={PHOTOS.slice(9, 12)} allPhotos={PHOTOS} className="gallery-grid--secondary" />
       </section>
       <Contact />
       <Footer />
