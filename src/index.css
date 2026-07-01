@@ -1,0 +1,36 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --navy: #0A1628;
+  --navy-mid: #1B4B8A;
+  --ocean: #2E7DD1;
+  --ocean-light: #4A9BE8;
+  --spray: #E8F4FD;
+  --white: #FFFFFF;
+  --red: #C8202A;
+  --gray-100: #F0F4F8;
+  --gray-400: #90A3B8;
+  --gray-600: #506070;
+  --text-dark: #0A1628;
+  --text-mid: #3A5068;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--white);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+}
